@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Telecom Funnel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript code to display selected plan details and totals
+        document.addEventListener('DOMContentLoaded', function() {
+            var planName = localStorage.getItem('selectedPlan');
+            var planPrice = localStorage.getItem('selectedPrice');
+            if (!planName || !planPrice) {
+                // default plan if none selected
+                planName = "Premium 15GB";
+                planPrice = 80;
+            } else {
+                // convert string price to number
+                planPrice = parseFloat(planPrice);
+            }
+            var activationFee = 35;
+            var regulatoryFee = 5;
+            var subtotal = planPrice + activationFee + regulatoryFee;
+            var tax = Math.round(subtotal * 0.08 * 100) / 100;
+            var total = Math.round((subtotal + tax) * 100) / 100;
+
+            document.getElementById('plan-name').textContent = planName;
+            document.getElementById('plan-price').textContent = "$" + planPrice.toFixed(2);
+            document.getElementById('activation-fee').textContent = "$" + activationFee.toFixed(2);
+            document.getElementById('regulatory-fee').textContent = "$" + regulatoryFee.toFixed(2);
+            document.getElementById('tax').textContent = "$" + tax.toFixed(2);
+            document.getElementById('total').textContent = "$" + total.toFixed(2);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Telecom Company</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="category.html">Plans</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Order Summary</h2>
+        <div class="summary">
+            <p><strong>Plan:</strong> <span id="plan-name">Premium 15GB</span></p>
+            <p><strong>Plan Price:</strong> <span id="plan-price">$80.00</span></p>
+            <p><strong>Activation Fee:</strong> <span id="activation-fee">$35.00</span></p>
+            <p><strong>Regulatory & Recovery Fee:</strong> <span id="regulatory-fee">$5.00</span></p>
+            <p><strong>Tax (estimated 8%):</strong> <span id="tax">$9.20</span></p>
+            <hr>
+            <h3>Total: <span id="total">$129.20</span></h3>
+            <p class="note">Note: Taxes and regulatory fees are estimates and may vary by location.</p>
+        </div>
+        <a class="button" href="index.html">Proceed to Payment</a>
+    </main>
+</body>
+</html>
