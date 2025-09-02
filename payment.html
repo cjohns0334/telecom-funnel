@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Payment Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout & Payment</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <h1>Checkout</h1>
-    </header>
-    <main class="container">
-        <section class="hero">
-            <h2>Payment & Checkout</h2>
-            <p>This page would show checkout details and ask for payment information.</p>
-            <button class="button" onclick="goBack()">Back to Shop Plans</button>
-        </section>
-    </main>
-    <script>
-        function goBack() {
-            window.location.href = 'category.html';
-        }
-    </script>
+  <header>
+    <h1>Checkout & Payment</h1>
+  </header>
+  <main>
+    <div class="summary">
+      <p>
+        This page would normally display detailed order information and collect payment details.
+        As this is a learning exercise, no real purchase will occur.
+      </p>
+      <p class="note">No payment information is collected on this site.</p>
+      <a href="category.html" class="checkout-btn">Back to Shop Plans</a>
+    </div>
+  </main>
 </body>
 </html>
