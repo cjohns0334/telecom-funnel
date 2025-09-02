@@ -94,6 +94,22 @@ main {
   margin-top: auto;
 }
 
+/* Images inside plan cards */
+.plan-card img.plan-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+/* Styles for advertisement copy paragraphs used throughout the site */
+.ad-copy {
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  color: #444;
+}
+
 .summary {
   background-color: #fff;
   border: 1px solid #e0e0e0;
@@ -124,9 +140,4 @@ main {
   text-decoration: none;
   font-weight: bold;
   margin-top: 1rem;
-}
-.plan-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
 }
