@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Plans</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+  // Function to handle plan selection
+  function selectPlan(planName, price) {
+    // Store selected plan details in localStorage for access in cart
+    localStorage.setItem('selectedPlan', JSON.stringify({ name: planName, price: price }));
+    window.location.href = 'cart.html';
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Choose Your Plan</h1>
+  </header>
+  <main>
+    <div class="plan-grid">
+      <!-- Plan cards; clicking "Select" stores plan and redirects -->
+      <div class="plan-card">
+        <img src="network_small.png" alt="Basic 1GB Plan" class="plan-img">
+        <h3>Basic 1GB</h3>
+        <div class="price">$20/mo</div>
+        <div class="features">1GB data, 100 mins</div>
+        <a href="#" class="button" onclick="selectPlan('Basic 1GB', 20)">Select</a>
+      </div>
+      <div class="plan-card">
+        <img src="network_small.png" alt="Basic 3GB Plan" class="plan-img">
+        <h3>Basic 3GB</h3>
+        <div class="price">$30/mo</div>
+        <div class="features">3GB data, 300 mins</div>
+        <a href="#" class="button" onclick="selectPlan('Basic 3GB', 40)">Select</a>
+      </div>
+      <div class="plan-card">
+        <img src="network_small.png" alt="Standard 5GB Plan" class="plan-img">
+        <h3>Standard 5GB</h3>
+        <div class="price">$45/mo</div>
+        <div class="features">5GB data, unlimited mins</div>
+        <a href="#" class="button" onclick="selectPlan('Standard 5GB', 45)">Select</a>
+      </div>
+      <div class="plan-card">
+        <img src="swirl_small.png" alt="Standard 10GB Plan" class="plan-img">
+        <h3>Standard 10GB</h3>
+        <div class="price">$65/mo</div>
+        <div class="features">10GB data, unlimited mins</div>
+        <a href="#" class="button" onclick="selectPlan('Standard 10GB', 65)">Select</a>
+      </div>
+      <div class="plan-card">
+        <img src="swirl_small.png" alt="Premium 15GB Plan" class="plan-img">
+        <h3>Premium 15GB</h3>
+        <div class="price">$80/mo</div>
+        <div class="features">15GB data, unlimited mins, 5G included</div>
+        <a href="#" class="button" onclick="selectPlan('Premium 15GB', 80)">Select</a>
+      </div>
+      <div class="plan-card">
+        <img src="swirl_small.png" alt="Premium Unlimited Plan" class="plan-img">
+        <h3>Premium Unlimited</h3>
+        <div class="price">$95/mo</div>
+        <div class="features">Unlimited data & mins, autopay discount</div>
+        <a href="#" class="button" onclick="selectPlan('Premium Unlimited', 95)">Select</a>
+      </div>
+      <div class="plan-card">
+        <img src="network_small.png" alt="Standard 20GB Plan" class="plan-img">
+        <h3>Standard 20GB</h3>
+        <div class="price">$90/mo</div>
+        <div class="features">20GB data, unlimited mins, synergy pack</div>
+        <a href="#" class="button" onclick="selectPlan('Standard 20GB', 90)">Select</a>
+      </div>
+      <div class="plan-card">
+        <img src="swirl_small.png" alt="Premium 30GB Plan" class="plan-img">
+        <h3>Premium 30GB</h3>
+        <div class="price">$120/mo</div>
+        <div class="features">30GB data, QoS++, synergy pack</div>
+        <a href="#" class="button" onclick="selectPlan('Premium 30GB', 120)">Select</a>
+      </div>
+      <div class="plan-card">
+        <img src="swirl_small.png" alt="Ultra Unlimited++ Plan" class="plan-img">
+        <h3>Ultra Unlimited++</h3>
+        <div class="price">$200/mo</div>
+        <div class="features">Unlimited++ data, 100GB high-speed then throttle, 8K streaming, B.O.M.*</div>
+        <a href="#" class="button" onclick="selectPlan('Ultra Unlimited++', 200)">Select</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
